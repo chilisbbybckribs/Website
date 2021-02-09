@@ -267,7 +267,24 @@
           background: #f9fcff;
           box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.2);
           border-radius: 6px;
-          }
+        }
+        @media at screeen and (max-width:600px); {
+          
+      #left-container{
+          position: absolute;
+          top: 0;
+          z-index: 7;
+          width:82%;
+          float: left;
+          margin-left: 42px;
+          margin-bottom: 12px;
+          margin-top: 33%;
+          padding: 24px;
+          background: #f9fcff;
+          box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 6px;
+        }
+      }
 
         label{
           padding:12px 12px;
