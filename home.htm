@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Online residential real estate brokerage - Nectr Realty</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <style>
+
+        html, body {
+          width: 100%;
+          margin: 0px;
+          background: #F9FCFF;
+          font-family: 'Nunito Sans', sans-serif;
+        }
+
+        /* HEADER */
+        .header_Container{
+          position:relative;
+          float:left;
+          width:100%;
+          height:700px;
+        }
+        header {
+          position: relative;
+          float:left;
+          width:100%;
+          height:400px;
+          background-image: url("./images/stock-img/aerial-neighborhood.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        div.header-transbox {
+          position: relative;
+          float: left;
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(to right, rgba(2,12,42,.4), rgba(2,12,42,.4), rgba(2,12,42,.3), rgba(242,242,242,.2));
+        }
+        header .header-content {
+          position: relative;
+          float:left;
+          z-index: 12;
+          width: 80%;
+          padding-left:42px;
+          text-align:left;
+          box-sizing: border-box;
+        }
+        header .pageTitle{
+          color: rgba(2,12,42,1);
+          font-family: 'Nunito Sans', sans-serif;
+          font-weight: 800;
+          line-height: 1;
+          font-size:80px;
+          margin-bottom:0px;
+          padding: 120px 0px 0px 0px;
+          box-sizing: border-box;
+          text-shadow: 2px 4px rgba(0,0,0,.1);
+        }
+        header h1{
+          position: relative;
+          z-index: 12;
+        }
+        header h2{
+          width:80%;
+          padding:0px 0px 24px 0px;
+          margin-top:0px;
+        }
+        h2.Body1{
+          margin-top:12px;
+          margin-bottom: 0px;
+          font-size:19px;
+          line-height: 1;
+          font-weight: 100;
+          color: rgba(2,12,42,1);
+        }
+        svg {
+          position:absolute;
+          z-index: 10;
+          bottom:0;
+          left: 0;
+          width: 100%;
+          height:200px;
+        }
+      @media screen and (max-width:600px){ /* when browser width is 600px wide or less - this style is used */
+        .header_Container{
+          height:420px;
+        }
+        header {
+          height:240px;
+        }
+        header .header-content {
+          width: 90%;
+          padding-left: 24px;
+        }
+        header .pageTitle{
+          font-size: 42px;
+          padding: 80px 0px 0px 0px;
+        }
+        header h2{
+          width:90%;
+        }
+        h2.Body1{
+          margin-top: 6px;
+          margin-bottom: 0px;
+          font-size: 16px;
+        }
+        svg {
+          height:100px;
+        }
+      }
+
+      /* BUTTONS */
+      .get-started_btn{
+        padding: 6px 12px 6px 12px;
+        border-radius:50px;
+        background:rgba(2,12,42,1);
+        color:rgba(242,242,242,1);
+        text-decoration: none;
+        font-size:16px;
+        font-weight:600;
+        border: none;
+        cursor:pointer;
+      }
+      .get-started_btn-no-fill{
+        padding: 6px 12px 6px 12px;
+        border-radius:50px;
+        color:rgba(2,12,42,1);
+        text-decoration: none;
+        font-size:16px;
+        font-weight:600;
+        border: none;
+        cursor:pointer;
+      }
+      .arrow-dark{
+        border: 1px solid rgba(2,12,42,1);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding:3px;
+        position: relative;
+        /* Adjust these values accordingly */
+        top: -1px;
+        left: 2px;
+      }
+      .arrow-light{
+        border: 1px solid rgba(242,242,242,1);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding:  3px;
+        position: relative;
+        /* Adjust these values accordingly */
+        top: -1px;
+        left: 2px;
+      }
+      .cta-solid_btn-small{
+        padding: 6px 12px 6px 12px;
+        border-radius:50px;
+        background:rgba(2,12,42,1);
+        color:rgba(242,242,242,1);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+        border: none;
+        cursor:pointer;
+      }
+      .more-info_btn{
+        padding: 3px 9px 3px 9px;
+        border-radius:42px;
+        background:rgba(2,12,42,.12);
+        color:rgba(2,12,42,1);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        border: none;
+        cursor:pointer;
+      }
+      .arrow-small-dark{
+        border: 1px solid rgba(42,54,73,1);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding:2px;
+        position: relative;
+        /* Adjust these values accordingly */
+        top: -1px;
+        left: 2px;
+      }
+      .arrow-small-light{
+        border: 1px solid rgba(242,242,242,1);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 2px;
+        position: relative;
+        /* Adjust these values accordingly */
+        top: -1px;
+        left: 2px;
+      }
+      @media screen and (max-width:600px) {
+        .get-started_btn{
+          padding: 6px 12px 6px 12px;
+          border-radius:50px;
+          background:rgba(2,12,42,1);
+          color:rgba(242,242,242,1);
+          text-decoration: none;
+          font-size:14px;
+          font-weight:500;
+          border: none;
+          cursor:pointer;
+        }
+        .get-started_btn-no-fill{
+          padding: 10px 14px 10px 14px;
+          border-radius:50px;
+          color:rgba(2,12,42,1);
+          text-decoration: none;
+          font-size:16px;
+          font-weight:600;
+          border: none;
+          cursor:pointer;
+        }
+        .arrow-dark{
+          border: 1px solid rgba(42,54,73,1);
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding:3px;
+        }
+        .arrow-light{
+          border: 1px solid rgba(242,242,242,1);
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding:3px;
+          position: relative;
+          /* Adjust these values accordingly */
+          top: -1px;
+          left: 2px;
+        }
+        .more-info_btn{
+          padding: 4px 9px 3px 9px;
+          font-size: 10px;
+          font-weight: 600;
+        }
+        .arrow-small-dark{
+          border-width: 0 2px 2px 0;
+          padding: 2px;
+          /* Adjust these values accordingly */
+          top: 0px;
+          left: 1px;
+        }
+        .cta-solid_btn-small{
+          padding: 4px 9px 3px 9px;
+          font-size: 10px;
+          font-weight: 400;
+        }
+        .arrow-small-light{
+          border: 1px solid rgba(242,242,242,1);
+          border-width: 0 2px 2px 0;
+          padding: 2px;
+          /* Adjust these values accordingly */
+          top: -1px;
+          left: 1px;
+        }
+      }
+
+        /* COMPANY INTRODUCTION */
+        .intro-section_Container {
+          position:relative;
+          float:left;
+          width:100%;
+          padding-top: 42px;
+          box-sizing: border-box;
+        }
+        .intro-copy_Container {
+          position:relative;
+          float:left;
+          width:75%;
+          padding: 0px 0px 0px 42px;
+          box-sizing: border-box;
+        }
+        .section-Label {
+         color: #ee9346;
+         float:left;
+         width: 100%;
+         font-family: 'Nunito Sans', sans-serif;
+         font-size:18px;
+         font-weight: 600;
+         line-height: 1;
+         margin-bottom: 36px;
+       }
+       .Title3{
+         margin-bottom: 6px;
+         font-family: 'Nunito Sans', sans-serif;
+         font-size:34px;
+         font-weight: 600;
+         line-height: 1;
+       }
+        .Body1{
+          margin-top:12px;
+          font-size:19px;
+          line-height: 1;
+          font-weight: 100;
+          color: rgba(2,12,42,1);
+        }
+        .new-badge{
+          background:#69CD9D;
+          text-decoration: none;
+          font-family: 'Nunito Sans', sans-serif;
+          color: white;
+          padding: 1px 12px 3px 12px;
+          font-size: 12px;
+          font-weight: 300;
+          border-radius:42px;
+        }
+        .platform-example_image-container {
+          width:100%;
+          height:auto;
+          margin-top:24px;
+          margin-bottom: 24px;
+          float:right;
+        }
+        .platform-example_image {
+          width:100%;
+          height:auto;
+          margin-top: 12px;
+          box-shadow: 0 30px 80px 0 rgba(0, 0, 0, 0.2);
+          border-top-left-radius:12px;
+          border-bottom-left-radius: 12px;
+        }
+        .Title4{
+          font-family: 'Nunito Sans', sans-serif;
+          font-size:24px;
+          font-weight: 400;
+          line-height: 1;
+        }
+        .Body2{
+          margin-top:6px;
+          margin-bottom: 16px;
+          font-family: 'Nunito Sans', sans-serif;
+          font-size:16px;
+          font-weight: 100;
+          line-height: 1;
+        }
+        @media screen and (max-width:600px){
+          .intro-section_Container {
+            padding-top: 36px;
+          }
+          .intro-copy_Container {
+            width:85%;
+            padding: 0px 0px 0px 24px;
+          }
+          .section-Label {
+           font-size: 15px;
+           margin-bottom: 24px;
+         }
+         .Title3{
+           margin-bottom: 6px;
+           font-family: 'Nunito Sans', sans-serif;
+           font-size: 22px;
+           font-weight: 600;
+           line-height: 1;
+         }
+          .Body1{
+            margin-top: 6px;
+            font-size: 14px;
+          }
+         .company-intro-statement_container{
+           position: relative;
+           border-radius: 6px;
+           width:100%;
+           text-align:left;
+           float:left;
+         }
+        .new-badge{
+          padding: 1px 9px 1px 9px;
+          font-size: 10px;
+          font-weight: 300;
+        }
+        .platform-example_image-container {
+          margin-top:12px;
+          margin-bottom: 6px;
+        }
+        .platform-example_image {
+          width:100%;
+          height:auto;
+          margin-top: 12px;
+          box-shadow: 0 30px 80px 0 rgba(0, 0, 0, 0.2);
+          border-top-left-radius:12px;
+          border-bottom-left-radius: 12px;
+        }
+        .Title4{
+          font-size:16px;
+        }
+        .Body2{
+          margin-top:6px;
+          margin-bottom: 16px;
+          font-size:12px;
+          font-weight: 100;
+          line-height: 1;
+        }
+      }
+
+      /* BRAND LOGOS */
+      .brand-logos-container{
+        width:100%;
+        height:auto;
+        float:left;
+        margin: auto;
+        text-align:center;
+        padding-top:60px;
+        padding-bottom:42px;
+        box-sizing: border-box;
+      }
+      .brand-logo-individual-container{
+        width:25%;
+        height:100%;
+        float:left;
+      }
+      .brand-logo-img{
+        width:60%;
+      }
+      .brand-logo-text{
+        width:100%;
+        height:auto;
+        margin: auto;
+        margin-top:42px;
+        font-size: 18px;
+        font-weight: 600;
+        color:rgba(10,22,68, .94);
+      }
+      @media screen and (max-width:600px){
+        .brand-logos-container{
+          padding-bottom:42px;
+          padding-top: 24px;
+        }
+        .brand-logo-individual-container{
+          width:50%;
+          margin-bottom:24px;
+        }
+        .brand-logo-img{
+          width:60%;
+        }
+        .brand-logo-text{
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+
+      /* WHY SELL WITH NECTR */
+      .why-nectr_Container {
+        position:relative;
+        float:left;
+        padding: 24px 24px 42px 24px;
+        box-sizing: border-box;
+        background-image: linear-gradient(to left, rgba(2,12,42,1),#1d2a54);
+      }
+      .why-nectr-cards_Container {
+        position:relative;
+        float:left;
+        width:100%;
+        height:auto;
+        margin-bottom:160px;
+        margin-top:42px;
+      }
+      .why-nectr_Card {
+        position:relative;
+        float:left;
+        width:50%;
+        height:auto;
+        margin-top:12px;
+        box-sizing:border-box;
+      }
+      .body_icon{
+        float:left;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 12px;
+        padding: 12px;
+        border-radius: 24px;
+        background: #fb7754;
+      }
+      .why-nectr-heading_Container {
+        position: relative;
+        float:left;
+        width:100%;
+        height:100%;
+      }
+      .why-nectr-body_Container {
+        position: relative;
+        float:left;
+        width:60%;
+        height:100%;
+      }
+      svg.why-nectr{
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+      }
+      @media screen and (max-width:600px) {
+        .why-nectr_Container {
+          padding: 24px 24px 42px 24px;
+        }
+        .why-nectr-cards_Container {
+          margin-bottom:90px;
+          margin-top:42px;
+        }
+        .why-nectr_Card {
+          margin-top:12px;
+        }
+        .body_icon{
+          width: 18px;
+          height: 18px;
+          margin-bottom: 12px;
+          padding: 9px;
+        }
+        .why-nectr-body_Container {
+          position: relative;
+          float:left;
+          width:90%;
+        }
+        svg.why-nectr{
+          position: absolute;
+          z-index: 10;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+        }
+      }
+
+
+      /* HOW TO GET STARTED CTA */
+      .how-to-get-started-container {
+        width:60%;
+        float: left;
+        padding: 0px 0px 0px 42px;
+      }
+      @media screen and (max-width:600px){ /* when browser width is 600px wide or less - this style is used */
+        .how-to-get-started-container {
+          width:80%;
+          float: left;
+          padding: 0px 0px 0px 42px;
+        }
+      }
+
+      /* FEATURES & BENEFITS CHECKLIST */
+      .features-benefits_Container{
+        width:75%;
+        height:100%;
+        margin:auto;
+        margin-top:42px;
+        box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+      }
+      .seller-features-checklist_container {
+        width: 100%;
+        height: 400px;
+        border-radius: 18px;
+        background-image: url("./images/yellowDoor.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .gradient-overlay {
+        height: 100%;
+        width:100%;
+        padding-left: 50%;
+        padding-top: 100px;
+        box-sizing: border-box;
+        border-radius: 18px;
+        background-image: linear-gradient(to right, rgba(2,12,42,.8), rgba(2,12,42,.6), rgba(2,12,42,.4));
+        opacity: 0.8;
+      }
+      ul.get-started_list {
+        width: 100%;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        font-size: 18px;
+        text-align: left;
+      }
+      li.get-started_list {
+        margin-top:5px;
+        font-weight:500;
+        color: rgba(242,242,242,.9);
+      }
+      img.checkmark_icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        position: relative;
+        /* Adjust these values accordingly */
+        top: 4px;
+        left: 2px;
+      }
+      @media screen and (max-width:600px){ /* when browser width is 600px wide or less - this style is used */
+        .features-benefits_Container{
+          width: 90%;
+          height: 100%;
+          margin:auto;
+          margin-top: 0px;
+          box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 12px;
+        }
+        .seller-features-checklist_container {
+          width: 100%;
+          height: 300px;
+          border-radius: 18px;
+          background-image: url("./images/yellowDoor.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .gradient-overlay {
+          height: 100%;
+          width: 100%;
+          padding-left: 10%;
+          padding-top: 50px;
+          box-sizing: border-box;
+          border-radius: 18px;
+          background-image: linear-gradient(to right, rgba(2,12,42,.8), rgba(2,12,42,.6), rgba(2,12,42,.4));
+          opacity: 0.8;
+        }
+        ul.get-started_list {
+          width: 100%;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          font-size: 14px;
+          text-align: left;
+        }
+        li.get-started_list {
+          margin-top: 5px;
+          font-weight: 500;
+          color: rgba(242,242,242,.9);
+        }
+        img.checkmark_icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          position: relative;
+          /* Adjust these values accordingly */
+          top: 4px;
+          left: 2px;
+        }
+      }
+
+
+      /* FOOTER */
+      .footer_Container{
+        float:left;
+        width:100%;
+        padding:42px 0px 42px 42px;
+        box-sizing: border-box;
+        background:rgba(65,87,117,.1);
+      }
+      .footer-list_Container {
+        width:33.3%;
+        float: left;
+        border-right:1px dotted rgba(2,12,42,.2);
+        padding: 0px 24px 0px 24px;
+        box-sizing: border-box;
+        text-align:left;
+      }
+      .footerTitle {
+        font-size:19px;
+        font-weight:600;
+        line-height: 1;
+        color:rgba(2,12,42,1);
+        margin-bottom: 12px;
+      }
+      ul.footer-pages_list {
+        width: 100%;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        font-size: 16px;
+        text-align: left;
+      }
+      li.footer-pages_list {
+        margin-top:0px;
+        font-weight:400;
+        color: rgba(10,22,68,.4);
+      }
+      .footer-list_Container a {
+        text-decoration:none;
+        color: rgba(10,22,68,.4);
+      }
+      .footer-logos{
+        height:42px;
+        margin-left:12px;
+        float: left;
+      }
+      .footer-text{
+        float:right;
+        text-align:right;
+        margin-right:24px;
+        margin-bottom:12px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size:12px;
+        color:#BEC1D3;
+      }
+      .footer-polygon-container{
+        position:relative;
+        float:left;
+        width:100%;
+        height:100px;
+      }
+      svg.footer-svg {
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height:100px;
+      }
+      @media screen and (max-width:600px){ /* when browser width is 600px wide or less - this style is used */
+        .footer_Container{
+          padding: 24px 0px 24px 12px;
+        }
+        .footer-list_Container {
+          padding: 0px 12px 0px 12px;
+        }
+        .footerTitle {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 6px;
+        }
+        ul.footer-pages_list {
+          font-size: 12px;
+          text-align: left;
+        }
+        .footer-logos{
+          height: 24px;
+          margin-left: 12px;
+          margin-bottom: -12px;
+        }
+        .footer-text{
+          margin-right: 12px;
+          margin-bottom: 6px;
+          font-size: 10px;
+        }
+        .footer-polygon-container{
+          position: relative;
+          float: left;
+          width: 100%;
+          height: 50px;
+        }
+        svg.footer-svg {
+          position:absolute;
+          top:0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+        }
+      }
+
+
+
+
+
+          /* GLOBAL STYLES */
+          .sectionDiv{
+             position: relative;
+             float: left;
+             width:100%;
+             margin-bottom: 42px;
+             margin-top:42px;
+           }
+           .white{
+             color: rgba(242,242,242,.8);
+           }
+           .dark{
+             color:rgba(2,12,42,1);
+           }
+
+
+          .Title2{
+             margin-bottom:12px;
+             font-family: 'Nunito Sans', sans-serif;
+             font-size:42px;
+             font-weight: 600;
+             line-height: 1;
+           }
+          .Title1{
+            font-family: 'Nunito Sans', sans-serif;
+            font-size:62px;
+            font-weight: 600;
+            line-height: 1;
+          }
+
+          .pageTitle-thin1{
+            font-size:54px;
+            font-weight:300;
+            line-height: 1;
+          }
+          .pageTitle-thin2{
+            font-size:32px;
+            font-weight:300;
+            line-height: 1;
+          }
+          .bodyHeading{
+            font-family: 'Nunito Sans', sans-serif;
+            font-size:19px;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 0px;
+          }
+          .pageTitle-thin3 {
+            font-size:24px;
+            font-weight:300;
+            line-height: 1;
+          }
+          .pageTitle3 {
+            font-size:21px;
+            font-weight:600;
+            line-height: 1;
+          }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <!-- beginning of Topbar -->
+  <div class="topbar">
+    <a href="home.htm"><img class="company-logo" src="./images/nectrLogo-white.png" ALT="some text"></a>
+
+    <div class="topnav" id="myTopnav">
+      <a class="active" href="home.htm">Home</a>
+      <a href="sell.htm">Sell</a>
+      <a href="pricing.htm">Pricing</a>
+      <a href="about.htm">About</a>
+      <div class="contactNumber">
+        <a style="text-align:left; font-weight:400;">(515) 447-2723</a>
+      </div>
+      <a href="http://dashboard.nectrrealty.com/login.php" class="login-btn">Log in <i class="arrow right"></i></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  <!-- end of Topbar -->
+
+<!-- beginning of Header -->
+<div class="header_Container">
+  <header>
+    <div class="header-transbox">
+      <div class="header-content">
+        <h1 class="pageTitle">An easy and<br>affordable way <br>to sell your<br> home</h1>
+        <h2 class="Body1">The comfort and security of working<br> with licensed Realtor's + the<br> convenience of a private online<br> dashboard. For a flat fee.</h2>
+
+        <div class="btns_Container" style="position:relative; float:left; width:100%;">
+          <a class="get-started_btn" href="http://dashboard.nectrrealty.com/register.php">Get started <i class="arrow-light right"></i></a>
+          <a class="get-started_btn-no-fill" href="contact.php">Contact us <i class="arrow-dark right"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+      <svg  viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon class="svg--sm" fill="#f9fcff" points="0,100 100,10  200,100 0,100"/>
+      </svg>
+
+  </header>
+</div>
+  <!-- end of Header-->
+
+
+<!-- beginning of introduction section -->
+<div class="sectionDiv">
+  <div class="intro-section_Container">
+      <div class="intro-copy_Container">
+        <a class="section-Label">Introduction</a>
+        <h3 class="Title3">People are our business.<br>Real estate is our niche.</h3>
+        <h4 class="Body1">Buying or selling a home is likely the largest financial transaction you will go through in life.
+                          Having the chance to help with that gets us excited. We believe in making it as simple, transparent and fair as it can be.</h4>
+        <a class="more-info_btn" href="about.htm">About Nectr <i class="arrow-small-dark right"></i></a>
+      </div>
+  </div>
+
+  <div class="intro-section_Container">
+    <!-- beginning of dashboard teaser -->
+    <div style="float:left;">
+      <div style="width:60%; float:right;">
+        <div class="platform-example_image-container">
+          <a class="new-badge">new</a>
+            <img class="platform-example_image" src="./images/dashboard/dashboard-message-animation.png" ALT="some text">
+        </div>
+        <div style="width:90%">
+          <a class="Title4">Want to get started?</a>
+          <p class="Body2">Click below to create an account and receive a professional valuation on your home. From your dashboard you can activate your listing any time.</p>
+          <a class="cta-solid_btn-small" href="http://dashboard.nectrrealty.com/register.php">Get Listed  <i class="arrow-small-light right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of introduction section -->
+
+
+<!-- beginning of brand logos -->
+<div class="brand-logos-container">
+  <div class="brand-logo-individual-container">
+    <img class="brand-logo-img" src="./images/logos/zillowlogo.png" ALT="some text">
+  </div>
+  <div class="brand-logo-individual-container">
+    <img class="brand-logo-img" style="margin-top:-24px;" src="./images/logos/mlslogo.png" ALT="some text">
+  </div>
+  <div class="brand-logo-individual-container">
+    <img class="brand-logo-img" src="./images/logos/Realtor.com_logo.png" ALT="some text">
+  </div>
+  <div class="brand-logo-individual-container">
+    <img class="brand-logo-img" src="./images/logos/trulia-logo.png" ALT="some text">
+  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="brand-logo-text">
+    <p>Be seen by more buyers</p>
+  </div>
+</div>
+<!-- end of brand logos -->
+
+
+<!-- beginning of why sell with nectr -->
+<div class="why-nectr_Container">
+  <a class="section-Label">Why sell with Nectr?</a>
+  <p class="Title3 white" style="width:80%;">Technology <span style="color:#ee9346">+</span> people to make the most important transaction in your life, an easy and secure one.</p>
+
+
+  <div class="why-nectr-cards_Container">
+    <div class="why-nectr_Card">
+      <i class="body_icon"><img src="./images/icons/piggy-bank-solid.svg"></i>
+      <div class="why-nectr-heading_Container Title4 white">Flat Fee</div>
+        <p class="why-nectr-body_Container Body2 white"><span style="color:#ee9346;font-weight:400;">We charge a flat fee regardless of the price of your home.</span> Real estate can be unpredictable. We think what you pay shouldn't.</p>
+    </div>
+
+    <div class="why-nectr_Card">
+      <i class="body_icon"><img src="./images/icons/piggy-bank-solid.svg"></i>
+      <div class="why-nectr-heading_Container Title4 white">Flat Fee</div>
+        <p class="why-nectr-body_Container Body2 white"><span style="color:#ee9346;font-weight:400;">We charge a flat fee regardless of the price of your home.</span> Real estate can be unpredictable. We think what you pay shouldn't.</p>
+    </div>
+
+    <div class="why-nectr_Card">
+      <i class="body_icon"><img src="./images/icons/piggy-bank-solid.svg"></i>
+      <div class="why-nectr-heading_Container Title4 white">Flat Fee</div>
+        <p class="why-nectr-body_Container Body2 white"><span style="color:#ee9346;font-weight:400;">We charge a flat fee regardless of the price of your home.</span> Real estate can be unpredictable. We think what you pay shouldn't.</p>
+    </div>
+
+    <div class="why-nectr_Card">
+      <i class="body_icon"><img src="./images/icons/piggy-bank-solid.svg"></i>
+      <div class="why-nectr-heading_Container Title4 white">Flat Fee</div>
+        <p class="why-nectr-body_Container Body2 white"><span style="color:#ee9346;font-weight:400;">We charge a flat fee regardless of the price of your home.</span> Real estate can be unpredictable. We think what you pay shouldn't.</p>
+    </div>
+  </div>
+
+  <svg class="why-nectr" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="svg--sm" fill="#f9fcff" points="0,100 100,10  200,100 0,100"/>
+  </svg>
+
+</div>
+<!-- end of why sell with nectr -->
+
+
+
+<!-- beginning of how to get started -->
+<div class="sectionDiv">
+  <div class="how-to-get-started-container">
+    <a class="section-Label">How to get started</a>
+    <h3 class="Title3">Ready to go?</h3>
+    <p class="Body1">Creating an account and connecting with our licensed Realtors is free. Once you create your account, we will get to work preparing an accurate valuation on your home -- You will be connected with someone on our team after registering -- We work hard to make you feel like the pro, but please don't hestitate to ask us questions.</p>
+
+    <div class="btns_Container" style="position:relative; float:left; width:100%;">
+      <a class="get-started_btn" href="http://dashboard.nectrrealty.com/register.php">Get started <i class="arrow-light right"></i></a>
+      <a class="get-started_btn-no-fill" href="contact.php">Contact us <i class="arrow-dark right"></i></a>
+    </div>
+
+  </div>
+</div>
+<!-- end of how to get started -->
+
+<!-- beginning of features & benefits -->
+<div class="sectionDiv" style="width:100%">
+  <div class="features-benefits_Container">
+    <div class="seller-features-checklist_container">
+      <div class="gradient-overlay">
+
+        <div class="Title3" style="position: relative;z-index:2; margin-bottom:18px; color:rgba(242,242,242,.9);">Get Started</div>
+
+        <ul class="get-started_list">
+          <li class="get-started_list"><img class="checkmark_icon" src="./images/icons/checkmark.svg" ALT="some text">Free to get listed</li>
+          <li class="get-started_list"><img class="checkmark_icon" src="./images/icons/checkmark.svg" ALT="some text">No transaction fees</li>
+          <li class="get-started_list"><img class="checkmark_icon" src="./images/icons/checkmark.svg" ALT="some text">Private Online Dashboard</li>
+          <li class="get-started_list"><img class="checkmark_icon" src="./images/icons/checkmark.svg" ALT="some text">Listed on MLS</li>
+        </ul>
+
+        <div style="margin-top:42px !important;">
+          <a class="get-started_btn" href="pricing.htm" style="background:rgba(242,242,242,.12); color:rgba(242,242,242,1); margin-left:6px;">Pricing & Services <i class="arrow-light right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of features & benefits checklist -->
+
+
+
+<!-- beginning of footer polygon -->
+<div class="footer-polygon-container">
+  <svg class="footer-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="svg--sm" fill="rgba(65,87,117,.1)" points="0,100 100,10  200,100 0,100"/>
+  </svg>
+</div>
+
+<!-- beginning of footer -->
+<div class="footer_Container" style="">
+
+    <div style="float:left; width:100%;">
+      <div class="footer-list_Container">
+        <h5 class="footerTitle">Services</h5>
+        <ul class="footer-pages_list">
+          <li class="footer-pages_list"><a href="sell.htm">Sell My Home</a></li>
+          <li class="footer-pages_list"><a href="http://dashboard.nectrrealty.com/register.php">Create Account</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list_Container">
+        <h5 class="footerTitle">Pricing</h5>
+        <ul class="footer-pages_list">
+          <li class="footer-pages_list"><a href="pricing.htm">Seller Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list_Container">
+        <h5 class="footerTitle">Other</h5>
+        <ul class="footer-pages_list">
+          <li class="footer-pages_list"><a href="about.htm">Company | About Us</a></li>
+          <li class="footer-pages_list"><a href="contact.php">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+</div>
+
+<div style=" width:100%; margin-top:0px; padding-left:0px !important; float:left; background:rgba(65,87,117,.1); ">
+  <img id="image" class="footer-logos"  src="./images/logos/realtor-logo_dark.png" ALT="some text">
+  <img id="image" class="footer-logos"  src="./images/logos/equal-housing_dark.png" ALT="some text">
+
+  <div  class="footer-text">
+    <span>Nectr Realty<br></span>
+    <span>  1100 15th Street<br></span>
+    <span>  West Des Moines, IA 50265<br></span>
+  </div>
+</div>
+
+
+
+
+
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+
+
+
+</body>
+</html>
